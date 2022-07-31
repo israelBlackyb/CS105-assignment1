@@ -104,7 +104,6 @@ public:
     }
 
     void display() { //report yacht number and location
-        cout << "The ship serial number is: ";
         cout << "\n and its position is: " << location.degreesLat << "\xF8" << location.minutesLat << "' " << location.degreesLat<<" in latitude\n";
         cout << location.degreesLong << "\xF8" << location.minutesLong << "' " << location.degreesLong << " in longitude\n";
        
@@ -113,10 +112,11 @@ public:
 
     Yacht(int yachtNum) {
         yachtNumber = yachtNum;
-        
     }
 
-    Yacht() {}
+    Yacht() {
+        
+    }
 };
 
 int main()
@@ -138,8 +138,8 @@ int main()
     }
     
     for (Yacht* yacht : Yachts) {
-        cout << yacht->yachtNumber;
+        cout << "The ship serial number is: ";
+        cout << yacht->yachtNumber<<endl;
         yacht->display();
     }
 }
-
