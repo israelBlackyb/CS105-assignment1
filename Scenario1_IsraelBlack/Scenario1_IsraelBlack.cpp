@@ -9,17 +9,17 @@ using std::string;
 using std::endl;
 using std::vector;
 using std::stringstream;
-
+void get_pos();
 
 class Location {
 public:
     int degreesLong=0; int degreesLat=0;
     float minutesLong=0; float minutesLat=0;
     char directionLong = 'E'; char directionLat = 'N';
-    void getpos() {
+    void getpos() { //recieves user input for location information and stores it inside class variables
     //latitude
         cout << "Enter latitude measurements: "; 
-        cout << "\nInput Degrees between 0 and 90: "; cin >> degreesLat; cout << degreesLat;
+        cout << "\nInput Degrees between 0 and 90: "; cin >> degreesLat; 
         cout << "\nInput Minutes: "; cin >> minutesLat;
         cout << "\nInput Direction (N/S): ";  cin >> directionLat; 
         cout << "\n**********************\n\n";
@@ -32,6 +32,8 @@ public:
         cout << "**********************\n**********************\n\n";
 
         //checking user inputs
+
+        //changes lowercase letters to uppercase for the direction variables
 
         if (directionLat == 'n') {
             directionLat = 'N';
@@ -49,7 +51,7 @@ public:
             directionLong = 'W';
         }
        
-
+        //outputs an error should the inputs not mastch the appropriate conditions
         if (directionLat != 'N' && directionLat != 'S')
  {
             cout << "Incorrect input, please enter correct Direction";
@@ -88,33 +90,31 @@ public:
         }
     }
 
-    Location() {
+    Location() { //defauilt constructor
         
     }
 };
 
 class Yacht {
-    Location location;
+    Location location; 
     
 public:
     int yachtNumber;
-    void get_pos(){ //get position from user and store it in object
-        location.getpos();
-        cout<<"\nIt's a test: " << location.minutesLat<<endl;
+
+    void get_pos(){ //stores location getpos() and stores it in the yacht object
+        location.getpos(); 
     }
 
     void display() { //report yacht number and location
         cout << "\n and its position is: " << location.degreesLat << "\xF8" << location.minutesLat << "' " << location.degreesLat<<" in latitude\n";
         cout << location.degreesLong << "\xF8" << location.minutesLong << "' " << location.degreesLong << " in longitude\n";
-       
-    
     }
 
-    Yacht(int yachtNum) {
+    Yacht(int yachtNum) { //class constructor
         yachtNumber = yachtNum;
     }
 
-    Yacht() {
+    Yacht() { //default class contructor
         
     }
 };
@@ -123,23 +123,25 @@ int main()
 {
     Yacht newYacht;
     cout << "*************Oceans Race 2021-2022***********" << endl;
-    cout << "\n***********************" << endl;
+  
     
-    for (int i = 1; i <= 3; i++) {
+    for (int i = 1; i <= 3; i++) { 
         cout << "Create yacht " << i << endl;
         newYacht.get_pos();
+        cout << "\n***********************" << endl;
     }
 
-    vector <Yacht*> Yachts;
+    vector <Yacht*> Yachts; //store each object created in a vector
 
-    for (int i = 0; i < 3; i++) {
-     
-        Yachts.push_back(new Yacht(i+1));
+    for (int i = 0; i < 3; i++) { //creates a new yacht, adds it to vector and adds location data vis Yacht class set function
+        Yachts.push_back(new Yacht(i+1)); 
+        Yachts[i] -> get_pos();
     }
     
-    for (Yacht* yacht : Yachts) {
-        cout << "The ship serial number is: ";
+    for (Yacht* yacht : Yachts) { //recieves yacht object information and outputs it to console (done via the display diplay() function
+        cout << "\nThe ship serial number is: ";
         cout << yacht->yachtNumber<<endl;
         yacht->display();
+
     }
 }
