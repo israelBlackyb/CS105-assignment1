@@ -1,9 +1,9 @@
 ﻿  Scenario 3.cpp
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(41,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(56,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(64,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(80,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(92,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(105,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(116,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(42,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(57,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(65,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(81,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(93,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(106,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(117,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
   Scenario 3.vcxproj -> C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\x64\Debug\Scenario 3.exe

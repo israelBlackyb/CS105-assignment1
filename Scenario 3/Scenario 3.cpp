@@ -30,6 +30,7 @@ public:
 
     void setData(int i) { //I think the Issue is here
         input = i;
+        cout << "\nInput is: " << input; //outputs memory address (i think) here
     }
 
     double getData() {
