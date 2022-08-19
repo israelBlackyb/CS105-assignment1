@@ -7,6 +7,7 @@ using std::endl;
 using std::string;
 
 void mainMenu();
+void menuSquare();
 void drawLines(int length);
 void drawSquare();
 void drawRectangle();
@@ -20,31 +21,33 @@ private:
     double radius=0;
     double result=0;
     double calcResult=0;
+    double input;
 
 protected:
     const double pi = 3.141;
 
 public:
-    double getData() {
-        double input = 0;
-        cin >> input;
-        return input;
+
+    void setData(int i) {
+        input = i;
     }
 
-    double setData(double input) {
-        calcResult = input;
+    double getData() {
+        return input;
     }
 
     double calculateArea(double height, double base) {   //calculates for square and rectangle
         double result = 0;
-        result = height * base;
-        setData(result);
+        result = (height + base)*2;
+        calcResult = result;
+        giveResult();
         return result;
     }
 
     double calculateArea(double radius) {
         double result = 0;
         result = pi * (radius * radius);
+        getData();
         setData(result);
         return result;
         giveResult();
@@ -59,17 +62,8 @@ public:
     }
 
     void giveResult() {
-        cout << "The result is: ";  calcResult; cout << " centimeters squared (Cm Sq)\n";
+        cout << "The result is: " << calcResult; cout << " centimeters squared (Cm Sq)\n";
     }
-
-    void shapeMenu(double perimeter) {
-        int shapeMenuInput;
-        cout << "\n1. Area (area = base * base sq.units)\n";
-        cout << "\n2. Perimeter (Perimeter = 4 * base sq.units)\n";
-        cout << "\n3. Go back to main menu\n";
-        cin >> shapeMenuInput;
-    }
-
 };
 
 class Squares : public Shapes { // Child Class
@@ -143,7 +137,7 @@ void mainMenu() {
     switch (inputOption)
     {
     case 1:
-
+        menuSquare();
         break;
 
     case 2:
@@ -168,6 +162,43 @@ void mainMenu() {
 }
 
 void menuSquare() {
+    int inputOption = 0;
+    double height=0;
+    double base=0;
+    Squares square;
+    double input;
+
+    drawLines(20); cout << "\nSqaure Calculator\n"; drawLines(20);
+    cout << "\n\n"; drawSquare();
+
+    cout << "Select from following options: \n";
+    cout << "1. Area (Area = base * base sq.units)\n";
+    cout << "2. Perimeter (Perimeter = 4 * base sq.units)\n";
+    cout << "3. Go back to Main Menu (Shapes Calculator)\n\n";
+    cout << "Please choose your option between 1 and 3: "; cin >> inputOption;
+
+    switch (inputOption)
+    {
+    case 1:
+        
+        cout << "\n\nPlease Enter One Side of the Square in centimeteres: "; cin >> input;
+        square.setData(input);
+        
+        base = height;
+        square.setData(base);
+        square.calculateArea(height, base);
+
+        break;
+    case 2:
+
+        break;
+
+    case 3:
+
+        break;
+    default:
+        break;
+    }
 
 }
 
