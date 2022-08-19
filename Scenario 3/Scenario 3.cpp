@@ -28,11 +28,12 @@ protected:
 
 public:
 
-    void setData(int i) {
+    void setData(int i) { //I think the Issue is here
         input = i;
     }
 
     double getData() {
+        
         return input;
     }
 
