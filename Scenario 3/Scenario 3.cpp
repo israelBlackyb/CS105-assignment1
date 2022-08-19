@@ -37,9 +37,13 @@ public:
     }
 
     double calculateArea(double height, double base) {   //calculates for square and rectangle
-        double result = 0;
+        setData(input);
+        height = getData();
+        cout << height;
         result = (height + base)*2;
+        cout << endl << result;
         calcResult = result;
+        cout << endl << result;
         giveResult();
         return result;
     }
@@ -163,8 +167,8 @@ void mainMenu() {
 
 void menuSquare() {
     int inputOption = 0;
-    double height=0;
-    double base=0;
+    double height=0; //must be intialised 
+    double base=0; //must also be intialised but resets values to 0 when they shouldn't be
     Squares square;
     double input;
 
@@ -182,12 +186,7 @@ void menuSquare() {
     case 1:
         
         cout << "\n\nPlease Enter One Side of the Square in centimeteres: "; cin >> input;
-        square.setData(input);
-        
-        base = height;
-        square.setData(base);
-        square.calculateArea(height, base);
-
+        square.calculateArea(height, base); 
         break;
     case 2:
 
