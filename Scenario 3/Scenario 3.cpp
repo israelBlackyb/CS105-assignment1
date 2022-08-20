@@ -1,10 +1,12 @@
 #include <iostream>
 #include <string>
+#include <cmath>
 
 using std::cout;
 using std::cin;
 using std::endl;
 using std::string;
+using std::pow;
 
 void mainMenu();
 void menuSquare();
@@ -19,10 +21,11 @@ void drawCircle();
 
 enum shape {
     sqre,
-    rect
+    rect,
+    tri
 };
 
-shape s = sqre;
+shape s;
 
 class Shapes { // Parent Class - basic measurements that all shapes contain
 private:
@@ -54,8 +57,18 @@ public:
       
 
         switch (s) {
+            
+        case tri: //allows triangle to access below options
+
         case rect:
-            cout << "Enter Width of Rectangle: ";
+            if (s == rect) {
+                cout << "Enter Width of Rectangle: ";
+            }
+             
+            else if (s == tri) {
+                cout << "Enter shortest Width of Triangle: ";
+            }
+
             base = getData();
             setData(input);
             
@@ -63,16 +76,22 @@ public:
             cout << "Enter Height of Shape: ";
             height = getData();
             setData(input);
+
+            if (base < 1) {           //Measures sqaures
+                result = height * height;
+            }
+
+            if (s == tri) {
+                result = (height * base) / 2;
+            }
+
+            else {
+                result = (height + base) * 2; //measures for rectangles
+            }
             break;
         }
         
-        if (base < 1) {           //Measures sqaures
-            result = height * height;
-        }
 
-        else {
-            result = (height + base) * 2; //measures for rectangles
-        }
    
         calcResult = result;
   
@@ -119,11 +138,11 @@ class Rectangle : public Shapes { // Child Class
 public:
     double calculatePerimeter(double height, double base) {
         cout << "\nEnter Height of Rectangle: ";
-        height = getData();
-        setData(input);
+        height = getData(); setData(input);
+        
 
         cout << "\nEnter Width of Rectangle: ";
-        base = getData();
+        base = getData(); setData(input);
         result = (height + base)*2;
         calcResult = result;
         giveResult();
@@ -132,15 +151,19 @@ public:
 };
 
 class Triangle : public Shapes { // Child Class
+    double longSide;
 public:
-    double calculatePerimeter(double sideA, double sideB, double sideC) {
-        cout << "Enter the Side 1 of the Triangle in Centimeters: "; sideA = getData();
-        cout << "Enter the Side 2 of the Triangle in Centimeters: "; sideB = getData();
-        cout << "Enter the Side 3 of the Triangle in Centimeters: "; sideC = getData();
-        double perimeter = sideA + sideB + sideC;
-        setData(perimeter);
-        return perimeter;
+    double calculatePerimeter(double height, double width) {
+        cout << "Enter the Width  of the Triangle in Centimeters: "; 
+        width = getData(); setData(input);
+        cout << "Enter the Height of the Triangle in Centimeters: "; 
+        height = getData(); setData(input);
+        longSide = (pow(width, 2) + pow(width, 2));
+        result = width + height + longSide;
+        calcResult = result;
         giveResult();
+        return calcResult;
+        
     }
 };
 
@@ -182,7 +205,7 @@ void mainMenu() {
         break;
 
     case 3:
-        drawTriangle();
+        menuTriangle();
         break;
 
     case 4:
@@ -200,8 +223,8 @@ void mainMenu() {
 
 void menuSquare() {
     int inputOption = 0;
-    double height=0; //must be intialised 
-    double base=0; //must also be intialised but resets values to 0 when they shouldn't be
+    double height=0; 
+    double base=0; 
     Squares square;
     double input;
 
@@ -281,8 +304,50 @@ void menuRectangle() {
     }
 }
 
-void menuTriangle() {
+void menuTriangle() { //Measures ONLY Right Angle Triangles
+    int inputOption = 0;
+    double height = 0; 
+    double base = 0; 
+    double sideC = 0; //long side of triangle
+    Triangle triangle;
+    double input;
 
+    s = tri;
+
+    drawLines(20); cout << "\nTriangle Calculator\n"; drawLines(20);
+    cout << "\n\n"; drawTriangle(); cout << "Right Angles\n"; drawLines(20);
+
+    cout << "\n\nSelect from following options: \n";
+    cout << "1. Area (Area = height * height sq.units)\n";
+    cout << "2. Perimeter (Perimeter = 4 * height sq.units)\n";
+    cout << "3. Go back to Main Menu (Shapes Calculator)\n\n";
+    cout << "Please choose your option between 1 and 3: "; cin >> inputOption;
+
+    switch (inputOption)
+    {
+    case 1:
+        cout << "\n\nPlease Enter Height of the Triangle in centimeteres: ";
+        triangle.calculateArea(height, base);
+        drawLines(45);
+        drawLines(45);
+        cout << "\n\n\n";
+        menuTriangle();
+        break;
+
+    case 2:
+        cout << "\n\nPlease Enter One Side of the Square in centimeteres: ";
+        triangle.calculatePerimeter(height, base);
+        break;
+
+    case 3:
+        mainMenu();
+        break;
+
+    default:
+        cout << "\nInvalid Option. Please select from options 1-3";
+        menuSquare();
+        break;
+    }
 }
 
 void drawLines(int length) {
