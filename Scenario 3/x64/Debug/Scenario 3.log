@@ -1,15 +1,17 @@
 ﻿  Scenario 3.cpp
 C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(73,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
 C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(78,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(106,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(114,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(129,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(141,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(145,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(158,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(160,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(174,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(228,12): warning C4101: 'input': unreferenced local variable
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(270,12): warning C4101: 'input': unreferenced local variable
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(312,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(102,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(112,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(127,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(139,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(143,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(156,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(158,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(173,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(217,9): warning C4551: function call missing argument list
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(231,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(273,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(314,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(358,12): warning C4101: 'input': unreferenced local variable
   Scenario 3.vcxproj -> C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\x64\Debug\Scenario 3.exe
