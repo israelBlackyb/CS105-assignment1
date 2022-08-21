@@ -1,17 +1,22 @@
 ﻿  Scenario 3.cpp
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(73,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(78,21): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(102,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(112,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(127,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(139,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(143,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(156,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(158,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(173,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(217,9): warning C4551: function call missing argument list
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(231,12): warning C4101: 'input': unreferenced local variable
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(273,12): warning C4101: 'input': unreferenced local variable
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(314,12): warning C4101: 'input': unreferenced local variable
-C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(358,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(33,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(37,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(48,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(64,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(74,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(87,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(91,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(101,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(104,35): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(119,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(123,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(134,36): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(136,37): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(152,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(162,17): warning C4244: 'argument': conversion from 'double' to 'int', possible loss of data
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(206,9): warning C4551: function call missing argument list
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(220,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(262,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(304,12): warning C4101: 'input': unreferenced local variable
+C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\Scenario 3.cpp(349,12): warning C4101: 'input': unreferenced local variable
   Scenario 3.vcxproj -> C:\Users\Poltato\Documents\GitHub\CS105-assignment1\Scenario 3\x64\Debug\Scenario 3.exe

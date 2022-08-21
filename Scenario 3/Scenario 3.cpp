@@ -1,6 +1,6 @@
 #include "Header.h"
 
-shape s;
+
 
 class Shapes { // Parent Class - basic measurements that all shapes contain
 private:
@@ -27,54 +27,17 @@ public:
         return input;
     }
 
-    double calculateArea(double height, double base) {   //calculates for square and rectangle
-
-        switch (s) {
-            
-        case tri: //allows triangle to access below options
-
-        case rect:
-            if (s == rect) {
-                cout << "Enter Width of Rectangle: ";
-            }
-             
-            else if (s == tri) {
-                cout << "Enter shortest Width of Triangle: ";
-            }
-
-            base = getData();
-            setData(input);
-            
-        case sqre: 
-            cout << "Enter Height of Shape: ";
-            height = getData();
-            setData(input);
-
-            if (base < 1) {           //Measures sqaures
-                result = height * height;
-            }
-
-            if (s == tri) { //measures triangles
-                result = (height * base) / 2;
-            }
-
-            else {
-                result = (height + base) * 2; //measures for rectangles
-            }
-            break;
-        }
-        calcResult = result; //acts as placeholder so result can be output and still used
-  
-        giveResult();
-        return result;
-    }
-
-    double calculateArea(double radius) { //calculate area of circle - an overloaded func
-        cout << "Enter Radius of circle: ";
-        radius = getData();
+    double calculateArea(double height, double base) {   //base function to be overridden
+        cout << "Enter Height of Shape: ";
+        height = getData();
         setData(input);
-        result = pi * pow(radius, 2);
-        calcResult = result;
+
+        cout << "Enter Width of Rectangle: ";
+        base = getData();
+        setData(input);
+
+        result = (height + base) * 2;
+        calcResult = result; //acts as placeholder so result can be output and still used
         giveResult();
         return calcResult;
     }
@@ -95,6 +58,17 @@ public:
 class Squares : public Shapes { // Child Class
     
 public:
+    double calculateArea(double height, double base) { //overridden function
+        cout << "Enter One Side of Square: ";
+        height = getData();
+        setData(input);
+
+        result = height * height;
+        calcResult = result; 
+        giveResult();
+        return calcResult;
+    }
+
     double calculatePerimeter(double height) { //overloaded function 
         height = getData();
         setData(input);
@@ -107,6 +81,21 @@ public:
 
 class Rectangle : public Shapes { // Child Class
 public:
+    double calculateArea(double height, double base) { //overridden function
+        cout << "Enter Height of Rectangle: ";
+        height = getData();
+        setData(input);
+
+        cout << "Enter Width of Rectangle: ";
+        base = getData();
+        setData(input);
+
+        result = height * base;
+        calcResult = result; 
+        giveResult();
+        return calcResult;
+    }
+
     double calculatePerimeter(double height, double base) { //overloaded function 
         cout << "\nEnter Height of Rectangle: ";
         height = getData(); setData(input);
@@ -114,6 +103,7 @@ public:
         cout << "\nEnter Width of Rectangle: ";
         base = getData(); setData(input);
         result = (height + base)*2;
+
         calcResult = result;
         giveResult();
         return calcResult;
@@ -123,12 +113,29 @@ public:
 class Triangle : public Shapes { // Child Class
     double longSide;
 public:
+    double calculateArea(double height, double base) { //overridden function
+        cout << "Enter Height of Triangle: ";
+        height = getData();
+        setData(input);
+
+        cout << "Enter Width of Triangle: ";
+        base = getData();
+        setData(input);
+
+
+        result = (height * base) / 2;
+        calcResult = result; 
+        giveResult();
+        return calcResult;
+    }
+
     double calculatePerimeter(double height, double width) { //overloaded function 
         cout << "Enter the Width  of the Triangle in Centimeters: "; 
         width = getData(); setData(input);
         cout << "Enter the Height of the Triangle in Centimeters: "; 
         height = getData(); setData(input);
         longSide = (pow(width, 2) + pow(width, 2));
+
         result = width + height + longSide;
         calcResult = result;
         giveResult();
@@ -139,6 +146,16 @@ public:
 
 class Circle : public Shapes { // Child Class
 public: 
+    double calculateArea(double radius) { //calculate area of circle - an overloaded func
+        cout << "Enter Radius of circle: ";
+        radius = getData();
+        setData(input);
+        result = pi * pow(radius, 2);
+        calcResult = result;
+        giveResult();
+        return calcResult;
+    }
+
     double calculatePerimeter(double radius) { //overloaded function 
         cout << "Enter the Radius of the Circle in Centimeters: "; 
         radius = getData();
@@ -216,7 +233,7 @@ void menuSquare() {
     case 1:
 
         cout << "\n\nPlease Enter One Side of the Square in centimeteres: ";
-        square.calculateArea(height); //overrided function
+        square.calculateArea(height, base); //overridden function
         drawLines(45);
         drawLines(45);
         cout << "\n\n\n";
@@ -244,7 +261,7 @@ void menuRectangle() {
     Rectangle rectangle;
     double input;
 
-    s = rect;
+
 
     drawLines(20); cout << "\nRectangle Calculator\n"; drawLines(20);
     cout << "\n\n"; drawRectangle();
@@ -286,7 +303,7 @@ void menuTriangle() { //Measures ONLY Right Angle Triangles
     Triangle triangle;
     double input;
 
-    s = tri;
+ 
 
     drawLines(20); cout << "\nTriangle Calculator\n"; drawLines(20);
     cout << "\n\n"; drawTriangle(); cout << "Right Angles\n"; drawLines(20);
@@ -331,7 +348,7 @@ void menuCircle() {
     Circle circle;
     double input;
 
-    s = tri;
+  
 
     drawLines(20); cout << "\nTriangle Calculator\n"; drawLines(20);
     cout << "\n\n"; drawCircle(); 

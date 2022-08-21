@@ -1,13 +1,11 @@
 #pragma once
 
 #include <iostream>
-#include <string>
 #include <cmath>
 
 using std::cout;
 using std::cin;
 using std::endl;
-using std::string;
 using std::pow;
 
 void mainMenu();
@@ -21,9 +19,3 @@ void drawSquare();
 void drawRectangle();
 void drawTriangle();
 void drawCircle();
-
-enum shape {
-    sqre,
-    rect,
-    tri
-};
