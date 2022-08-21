@@ -3,20 +3,17 @@
 
 
 class Shapes { // Parent Class - basic measurements that all shapes contain
-private:
+private: //access specifier
     double base=0;
     double height=0;
     double radius = 0;
 
-protected:
-    double input;
 
-protected:
+protected: //access specifier
     const double pi = 3.141;
     double calcResult = 0;
     double result = 0;
-
-public:
+    double input;
 
     void setData(int i) {
         input = i;
@@ -27,6 +24,11 @@ public:
         return input;
     }
 
+    void giveResult() {
+        cout << "The result is: " << calcResult; cout << " centimeters squared (Cm Sq)\n";
+    }
+
+public://access specifier
     double calculateArea(double height, double base) {   //base function to be overridden
         cout << "Enter Height of Shape: ";
         height = getData();
@@ -50,119 +52,117 @@ public:
         giveResult();
     }
 
-    void giveResult() {
-        cout << "The result is: " << calcResult; cout << " centimeters squared (Cm Sq)\n";
-    }
+    
 };
 
 class Squares : public Shapes { // Child Class
     
-public:
+public://access specifier
     double calculateArea(double height, double base) { //overridden function
         cout << "Enter One Side of Square: ";
-        height = getData();
-        setData(input);
+        height = getData();//inhereted Function
+        setData(input);//inhereted Function
 
-        result = height * height;
-        calcResult = result; 
-        giveResult();
+        result = height * height; //inherited variable
+        calcResult = result;  //inherited variable
+        giveResult(); //inhereted Function
         return calcResult;
     }
 
     double calculatePerimeter(double height) { //overloaded function 
-        height = getData();
-        setData(input);
-        result = height * 4;
-        calcResult = result;
-        giveResult();
+        height = getData(); //inhereted Function
+        setData(input);//inhereted Function
+        result = height * 4; //inherited variable
+        calcResult = result;//inherited variable
+        giveResult();//inhereted Function
         return calcResult;
     }
 };
 
 class Rectangle : public Shapes { // Child Class
-public:
+public://access specifier
     double calculateArea(double height, double base) { //overridden function
         cout << "Enter Height of Rectangle: ";
-        height = getData();
-        setData(input);
+        height = getData();//inhereted Function
+        setData(input);//inhereted Function
 
         cout << "Enter Width of Rectangle: ";
-        base = getData();
-        setData(input);
+        base = getData();//inhereted Function
+        setData(input);//inhereted Function
 
-        result = height * base;
-        calcResult = result; 
-        giveResult();
+        result = height * base; //inherited variable
+        calcResult = result; //inherited variable
+        giveResult();//inhereted Function
         return calcResult;
     }
 
     double calculatePerimeter(double height, double base) { //overloaded function 
         cout << "\nEnter Height of Rectangle: ";
-        height = getData(); setData(input);
+        height = getData(); setData(input); //inhereted Function
         
         cout << "\nEnter Width of Rectangle: ";
-        base = getData(); setData(input);
-        result = (height + base)*2;
+        base = getData(); setData(input); //inhereted Function
+        result = (height + base)*2; //inherited variable
 
-        calcResult = result;
-        giveResult();
+        calcResult = result;//inherited variable
+        giveResult(); //inhereted Function
         return calcResult;
     }
 };
 
 class Triangle : public Shapes { // Child Class
     double longSide;
-public:
+public://access specifier
     double calculateArea(double height, double base) { //overridden function
         cout << "Enter Height of Triangle: ";
-        height = getData();
-        setData(input);
+        height = getData(); //inhereted Function
+        setData(input); //inhereted Function
 
         cout << "Enter Width of Triangle: ";
-        base = getData();
-        setData(input);
+        base = getData();//inhereted Function
+        setData(input);//inhereted Function
 
 
-        result = (height * base) / 2;
-        calcResult = result; 
-        giveResult();
+        result = (height * base) / 2;//inherited variable
+        calcResult = result; //inherited variable
+        giveResult();//inhereted Function
         return calcResult;
     }
 
     double calculatePerimeter(double height, double width) { //overloaded function 
         cout << "Enter the Width  of the Triangle in Centimeters: "; 
-        width = getData(); setData(input);
+        width = getData(); setData(input);//inhereted Function
         cout << "Enter the Height of the Triangle in Centimeters: "; 
-        height = getData(); setData(input);
+        height = getData(); setData(input);//inhereted Function
         longSide = (pow(width, 2) + pow(width, 2));
 
-        result = width + height + longSide;
-        calcResult = result;
-        giveResult();
+        result = width + height + longSide;//inherited variable
+        calcResult = result;//inherited variable
+        giveResult();//inhereted Function
         return calcResult;
         
     }
 };
 
 class Circle : public Shapes { // Child Class
-public: 
+public: //access specifier
     double calculateArea(double radius) { //calculate area of circle - an overloaded func
         cout << "Enter Radius of circle: ";
-        radius = getData();
-        setData(input);
-        result = pi * pow(radius, 2);
-        calcResult = result;
-        giveResult();
+        radius = getData();//inhereted Function
+        setData(input);//inhereted Function
+        result = pi * pow(radius, 2); //inherited variable
+        calcResult = result; //inherited variable
+        giveResult(); //inhereted Function
         return calcResult;
     }
 
     double calculatePerimeter(double radius) { //overloaded function 
         cout << "Enter the Radius of the Circle in Centimeters: "; 
-        radius = getData();
-        setData(input);
-        result = 2 * pi * radius;
-        calcResult = result;
-        giveResult();
+        radius = getData(); //inhereted Function
+        setData(input);//inhereted Function
+        result = 2 * pi * radius; //inherited variable
+        calcResult = result; //inherited variable
+        giveResult(); //inhereted Function
         return calcResult;
        
     }
@@ -216,7 +216,7 @@ void menuSquare() {
     int inputOption = 0;
     double height=0; 
     double base=0; 
-    Squares square;
+    Squares square; //Data Member
     double input;
 
     drawLines(20); cout << "\nSqaure Calculator\n"; drawLines(20);
@@ -258,7 +258,7 @@ void menuRectangle() {
     int inputOption = 0;
     double height = 0; 
     double base = 0; 
-    Rectangle rectangle;
+    Rectangle rectangle; //Data Member
     double input;
 
 
@@ -300,7 +300,7 @@ void menuTriangle() { //Measures ONLY Right Angle Triangles
     int inputOption = 0;
     double height = 0; 
     double base = 0;
-    Triangle triangle;
+    Triangle triangle; //Data Member
     double input;
 
  
@@ -345,7 +345,7 @@ void menuTriangle() { //Measures ONLY Right Angle Triangles
 void menuCircle() {
     int inputOption;
     double radius=0;
-    Circle circle;
+    Circle circle; //Data Member
     double input;
 
   
