@@ -1,4 +1,6 @@
- #include <iostream>
+//Israel Black 270161698
+
+#include <iostream>
 #include <vector>
 #include <string>
 #include <sstream>
@@ -31,7 +33,6 @@ public:
         cout << "Input Direction (E/W): \n"; cin >> directionLong; 
         cout << "**********************\n**********************\n\n";
 
-        //checking user inputs
 
         //changes lowercase letters to uppercase for the direction variables
 
@@ -111,7 +112,7 @@ public:
     }
 
     Yacht(int yachtNum) { //class constructor
-        yachtNumber = yachtNum;
+       this-> yachtNumber = yachtNum;
     }
 
     Yacht() { //default class contructor
@@ -123,25 +124,19 @@ int main()
 {
     Yacht newYacht;
     cout << "*************Oceans Race 2021-2022***********" << endl;
-  
-    
-    for (int i = 1; i <= 3; i++) { 
-        cout << "Create yacht " << i << endl;
-        newYacht.get_pos();
-        cout << "\n***********************" << endl;
-    }
 
     vector <Yacht*> Yachts; //store each object created in a vector
 
     for (int i = 0; i < 3; i++) { //creates a new yacht, adds it to vector and adds location data vis Yacht class set function
+        cout << "Create yacht " << i + 1 << endl;
         Yachts.push_back(new Yacht(i+1)); 
         Yachts[i] -> get_pos();
+        cout << "\n***********************" << endl;
     }
     
     for (Yacht* yacht : Yachts) { //recieves yacht object information and outputs it to console (done via the display diplay() function
         cout << "\nThe ship serial number is: ";
         cout << yacht->yachtNumber<<endl;
         yacht->display();
-
     }
 }

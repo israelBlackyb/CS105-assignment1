@@ -76,6 +76,7 @@ public://access specifier
         calcResult = result;//inherited variable
         giveResult();//inhereted Function
         return calcResult;
+        
     }
 };
 
@@ -242,6 +243,7 @@ void menuSquare() {
     case 2:
         cout << "\n\nPlease Enter One Side of the Square in centimeteres: ";
         square.calculatePerimeter(height); //same as in the parent class place holder
+        menuSquare();
         break;
 
     case 3:
@@ -260,8 +262,6 @@ void menuRectangle() {
     double base = 0; 
     Rectangle rectangle; //Data Member
     double input;
-
-
 
     drawLines(20); cout << "\nRectangle Calculator\n"; drawLines(20);
     cout << "\n\n"; drawRectangle();
